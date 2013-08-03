@@ -38,14 +38,13 @@
     
     [robot update:dt];
     [self checkForAndResolveCollisions:robot];
-    //[self checkForAndResolveCollisions:robot];
     
 }
 
 -(NSArray *)getSurroundingTilesAtPosition:(CGPoint)position forLayer:(CCTMXLayer *)layer {
     
     CGPoint plPos = [self tileCoordForPosition:position]; //1
-    NSLog(@"%f, %f", plPos.x, plPos.y);
+
     NSMutableArray *gids = [NSMutableArray array]; //2
     
     for (int i = 0; i < 9; i++) { //3
@@ -53,7 +52,7 @@
         int r = (int)(i / 3);
         CGPoint tilePos = ccp(plPos.x + (c - 1), plPos.y + (r - 1));
         
-        unsigned int tgid = [layer tileGIDAt:tilePos]; //4
+        int tgid = [layer tileGIDAt:tilePos]; //4
         
         CGRect tileRect = [self tileRectFromTileCoords:tilePos]; //5
         
@@ -94,11 +93,11 @@
 -(void)checkForAndResolveCollisions:(Player *)p {
     
     NSArray *tiles = [self getSurroundingTilesAtPosition:p.position forLayer:walls]; //1
-    NSLog(@"%@", tiles);
-    p.onGround = NO; //////Here
+    //NSLog(@"%@", tiles);
+    p.onGround = NO;
     
     for (NSDictionary *dic in tiles) {
-        CGRect pRect = [p collisionBoundingBox]; //3
+        CGRect pRect = [p collisionBoundingBox]; 
         
         int gid = [[dic objectForKey:@"gid"] intValue]; //4
         if (gid) {
@@ -157,12 +156,14 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
-		
+		CCLayerColor *blueSky = [[CCLayerColor alloc] initWithColor:ccc4(100, 100, 250, 255)];
+        [self addChild:blueSky];
+        
         map = [[CCTMXTiledMap alloc] initWithTMXFile:@"level1.tmx"];
         [self addChild:map];
         
         robot = [[Player alloc] initWithFile:@"spritebots_still_1.png"];
-        robot.position = ccp(150, 200);
+        robot.position = ccp(150, 250);
         [map addChild:robot z:15];
         
         walls = [map layerNamed:@"walls"];

@@ -14,7 +14,6 @@
 		D22FA92817AC8FB800A05E41 /* spritebots_move_3.png in Resources */ = {isa = PBXBuildFile; fileRef = D22FA92417AC8FB800A05E41 /* spritebots_move_3.png */; };
 		D22FA92917AC8FB800A05E41 /* spritebots_move_4.png in Resources */ = {isa = PBXBuildFile; fileRef = D22FA92517AC8FB800A05E41 /* spritebots_move_4.png */; };
 		D22FA92A17AC8FB800A05E41 /* spritebots_still_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D22FA92617AC8FB800A05E41 /* spritebots_still_1.png */; };
-		D22FA92C17AC91C100A05E41 /* level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = D22FA92B17AC91C100A05E41 /* level1.tmx */; };
 		D23401BD17A3E04D00E21355 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23401BC17A3E04D00E21355 /* QuartzCore.framework */; };
 		D23401BF17A3E04D00E21355 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23401BE17A3E04D00E21355 /* OpenGLES.framework */; };
 		D23401C117A3E04D00E21355 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23401C017A3E04D00E21355 /* OpenAL.framework */; };
@@ -150,6 +149,7 @@
 		D234036617A3E05300E21355 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D234036517A3E05300E21355 /* HelloWorldLayer.m */; };
 		D234036917A3E05300E21355 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D234036817A3E05300E21355 /* IntroLayer.m */; };
 		D234037117A3E08800E21355 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = D234037017A3E08800E21355 /* Player.m */; };
+		D25969FD17ACE1770071263F /* level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = D25969FC17ACE1770071263F /* level1.tmx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -160,7 +160,6 @@
 		D22FA92417AC8FB800A05E41 /* spritebots_move_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spritebots_move_3.png; sourceTree = "<group>"; };
 		D22FA92517AC8FB800A05E41 /* spritebots_move_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spritebots_move_4.png; sourceTree = "<group>"; };
 		D22FA92617AC8FB800A05E41 /* spritebots_still_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spritebots_still_1.png; sourceTree = "<group>"; };
-		D22FA92B17AC91C100A05E41 /* level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = level1.tmx; path = ../level1.tmx; sourceTree = "<group>"; };
 		D23401B917A3E04D00E21355 /* platform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = platform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23401BC17A3E04D00E21355 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D23401BE17A3E04D00E21355 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -444,6 +443,7 @@
 		D234036817A3E05300E21355 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		D234036F17A3E08800E21355 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../Player.h; sourceTree = "<group>"; };
 		D234037017A3E08800E21355 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = ../Player.m; sourceTree = "<group>"; };
+		D25969FC17ACE1770071263F /* level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level1.tmx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,7 +534,7 @@
 			isa = PBXGroup;
 			children = (
 				D22FA92217AC8FB800A05E41 /* robot */,
-				D22FA92B17AC91C100A05E41 /* level1.tmx */,
+				D25969FC17ACE1770071263F /* level1.tmx */,
 				D22FA91C17AC8D7F00A05E41 /* liquidWaterTop_mid.png */,
 				D22FA91D17AC8D7F00A05E41 /* liquidWaterTop.png */,
 				D22FA91A17AC8D7500A05E41 /* grass_9.png */,
@@ -986,7 +986,7 @@
 				D22FA92817AC8FB800A05E41 /* spritebots_move_3.png in Resources */,
 				D22FA92917AC8FB800A05E41 /* spritebots_move_4.png in Resources */,
 				D22FA92A17AC8FB800A05E41 /* spritebots_still_1.png in Resources */,
-				D22FA92C17AC91C100A05E41 /* level1.tmx in Resources */,
+				D25969FD17ACE1770071263F /* level1.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
